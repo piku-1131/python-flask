@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 port = int(os.environ.get("PORT", 5000))
 
-@app.route('/hello')
+@app.route('/')
 def printHelloWorld():
     return '<h1>Hello World</h1>'
 
@@ -17,7 +17,7 @@ def getCurrentTime():
     return current_time
 
 if __name__ == "__main__":
-    app.run(debug=false, host="0.0.0.0",port=port)
+    app.run(debug=True, host="0.0.0.0",port=port)
     
     
   
